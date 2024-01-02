@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://csq24ad442y2j"]
+
+[ext_resource type="Script" path="res://attributes/CharacterMovement.gd" id="1_kd3ex"]
+
+[node name="CharacterMovement" type="Node2D"]
+script = ExtResource("1_kd3ex")

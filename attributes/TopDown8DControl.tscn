@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqxt58crdqqdj"]
+
+[ext_resource type="Script" path="res://attributes/TopDown8DControl.gd" id="1_s0qi2"]
+
+[node name="TopDown8DControl" type="Node"]
+script = ExtResource("1_s0qi2")

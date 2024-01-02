@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxmjo0b8kuoy4"]
+
+[ext_resource type="Texture2D" uid="uid://b1m53l8c2pix0" path="res://assets/monochrome-transparent_packed (x4).png" id="1_qmxbr"]
+[ext_resource type="PackedScene" uid="uid://cqxt58crdqqdj" path="res://attributes/TopDown8DControl.tscn" id="2_atdby"]
+[ext_resource type="PackedScene" uid="uid://csq24ad442y2j" path="res://attributes/CharacterMovement.tscn" id="3_rw4qn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x4mjp"]
+radius = 16.0
+height = 56.0
+
+[node name="Hero" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qmxbr")
+region_enabled = true
+region_rect = Rect2(1600, 0, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_x4mjp")
+
+[node name="TopDown8DControl" parent="." node_paths=PackedStringArray("character_movement") instance=ExtResource("2_atdby")]
+character_movement = NodePath("../CharacterMovement")
+
+[node name="CharacterMovement" parent="." instance=ExtResource("3_rw4qn")]
